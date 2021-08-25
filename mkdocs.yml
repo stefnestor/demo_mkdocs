@@ -1,0 +1,98 @@
+site_name: ""
+site_url: 'https://stefnestor.github.io/mkdocs'
+
+repo_name: 'stefnestor/mkdocs'
+repo_url: 'https://github.com/stefnestor/mkdocs'
+edit_uri: 'https://github.com/stefnestor/mkdocs/edit/main/docs'
+
+theme: 
+  name: material
+  palette:
+    # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#primary-color
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: light green
+      accent: cyan
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: cyan
+      accent: amber
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  features:
+    - navigation.features
+    - navigation.instant
+    - navigation.sections
+    - navigation.tabs
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+markdown_extensions:
+  - admonition
+  - abbr
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.extra:
+      smart_enable: True
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+plugins:
+  - search:
+      prebuild_index: true
+  - awesome-pages
+  - section-index
+  - exclude:
+      glob:
+        - "*.adb"
+        - "*.asm"
+        - "*.conf"
+        - "*.sh"
+        - "*.go"
+        - "*.html"
+        - "*.jl"
+        # - "*/langs/*.js"
+        - "*.pdf"
+        - "*.php"
+        - "*.py"
+        - "*.r"
+        - "*.rb"
+        - "*.txt"
+        - "*/langs/*.yml"
