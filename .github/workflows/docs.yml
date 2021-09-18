@@ -19,7 +19,6 @@ jobs:
 
       - name: dependencies
         run: |
-          pip install .
           pip install \ 
             mkdocs-material \
             mkdocs-macros-plugin \
