@@ -7,7 +7,7 @@ on:
 jobs:
   docs:
     name: build docs
-    runs-on: squidfunk/mkdocs-material
+    runs-on: ubuntu-latest
     steps:
       - name: checkout repository
         uses: actions/checkout@v2
