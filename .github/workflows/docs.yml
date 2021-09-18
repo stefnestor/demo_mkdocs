@@ -3,14 +3,14 @@ name: Documentation
 on:
   push:
     branches:
-    - master
+    - main
     paths:
     - .github/workflows/docs.yml
     - mkdocs.yml
     - 'docs/**'
   pull_request:
     branches:
-    - master
+    - main
     paths:
     - .github/workflows/docs.yml
     - mkdocs.yml
