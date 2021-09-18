@@ -1,25 +1,8 @@
-site_name: "hello"
-site_url: 'https://stefnestor.github.io/mkdocs'
+site_name: test
+docs_dir: docs/
 
 repo_name: 'stefnestor/mkdocs'
 repo_url: 'https://github.com/stefnestor/mkdocs'
-edit_uri: 'https://github.com/stefnestor/mkdocs/edit/main/docs'
 
-theme: 
+theme:
   name: material
-  palette:
-    # https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#primary-color
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: light green
-      accent: cyan
-      toggle:
-        icon: material/toggle-switch-off-outline
-        name: Switch to dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: cyan
-      accent: amber
-      toggle:
-        icon: material/toggle-switch
-        name: Switch to light mode
