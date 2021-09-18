@@ -1,0 +1,32 @@
+name: docs
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  docs:
+    name: build docs
+    runs-on: squidfunk/mkdocs-material
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v2
+
+      - name: setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.7
+
+      - name: dependencies
+        run: |
+          pip install .
+          pip install \ 
+            mkdocs-material \
+            mkdocs-macros-plugin \
+            mkdocs-awesome-pages-plugin \
+            mkdocs-section-index \ 
+            mkdocs-exclude \ 
+            git+https://github.com/srymh/MkdocsTagPlugin.git#egg=mdoctag
+
+      - name: deploy
+        run: mkdocs gh-deploy --force
