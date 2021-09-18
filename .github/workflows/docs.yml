@@ -14,4 +14,5 @@ jobs:
           python-version: 3.7
       - run: pip install mkdocs-material mkdocs-macros-plugin mkdocs-awesome-pages-plugin mkdocs-section-index mkdocs-exclude git+https://github.com/srymh/MkdocsTagPlugin.git#egg=mdoctag
       - run: mkdocs gh-deploy --force
+      - run: mkdocs --version
 
